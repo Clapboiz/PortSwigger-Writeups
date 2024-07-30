@@ -21,3 +21,6 @@ Payload:
 ```
 ../../../../etc/passwd%00a.jpg
 ```
+
+### REFERENCES
+[1]. https://www.thehacker.recipes/web/inputs/null-byte-injection
