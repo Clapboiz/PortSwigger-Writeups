@@ -1,5 +1,3 @@
-![image](https://github.com/user-attachments/assets/f298d71a-8639-47af-ba01-dd30f8745647)![image](https://github.com/user-attachments/assets/9d81a63b-0836-473e-8638-61f44537f98e)
-
 ![image](https://github.com/user-attachments/assets/a7e1054e-b0a6-4cef-9ca9-5560e20c1fa5)
 
 Không thể upload được và dường như thông báo nó cũng chung chung, quay lại challenge thì ta có thể thấy được rằng đây là challenge `race condition`.
