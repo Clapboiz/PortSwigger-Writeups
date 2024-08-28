@@ -1,3 +1,9 @@
+### Challenge 1: OS command injection, simple case
+### Challenge 2: Blind OS command injection with time delays
+### Challenge 3: Blind OS command injection with output redirection
+### Challenge 4: Blind OS command injection with out-of-band interaction
+### Challenge 5: Blind OS command injection with out-of-band data exfiltration
+
 **`Command substitution`** is a feature of shell scripting that allows you to take the output of one command and use it as the input for another command. In Unix and similar operating systems, command substitution is done by placing the command within backticks (`) or the $(...) syntax.
 
 Here's how it works:
