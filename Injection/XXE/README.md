@@ -23,4 +23,5 @@ Khai báo external entity chính là điểm mấu chốt trong kỹ thuật t�
    ![image](https://github.com/user-attachments/assets/a194df40-df81-492b-8e5a-64f5297b9e30)
 ### REFERENCES
 [1]. https://viblo.asia/p/xml-external-entity-xxe-injection-07LKX97pZV4
+
 [2]. https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XXE%20Injection
