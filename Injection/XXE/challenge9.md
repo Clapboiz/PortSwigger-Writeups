@@ -61,6 +61,7 @@ Kẻ tấn công có thể lợi dụng local DTD và kết hợp với internal
 
 **Giải thích chi tiết payload**
 
+```
 Định nghĩa một XML parameter entity (local_dtd):
 
 <!ENTITY % local_dtd SYSTEM "file:///usr/share/yelp/dtd/docbookx.dtd">:
@@ -89,6 +90,7 @@ Thực thi local DTD và kích hoạt lỗi:
 Sau khi định nghĩa các entity cần thiết, %local_dtd; được sử dụng để chèn nội dung của file local DTD (docbookx.dtd) vào tài liệu XML. Việc này sẽ include (bao gồm) tất cả các entity đã được định nghĩa lại.
 
 Khi parser XML xử lý nội dung này, nó sẽ cố gắng thực thi các entity %eval và %error, dẫn đến lỗi phân tích cú pháp.
+```
 
 1. Xử Lý Entities Đã Định Nghĩa:
    
