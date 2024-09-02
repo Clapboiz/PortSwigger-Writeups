@@ -73,3 +73,5 @@ Khai báo external entity chính là điểm mấu chốt trong kỹ thuật t�
 [2]. https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XXE%20Injection
 
 [3]. https://viblo.asia/s/xml-external-entity-vulnerabilities-xxe-cac-lo-hong-xml-external-entity-BQyJKzR74Me
+
+[4]. https://github.com/GoSecure/dtd-finder/blob/master/list/dtd_files.txt
