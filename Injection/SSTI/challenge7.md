@@ -40,10 +40,22 @@ Sau khi up 1 shell lên thì nó trả ra lỗi và nó báo luôn cho chúng ta
 
 ![image](https://github.com/user-attachments/assets/9a0ef58c-7d3c-4273-a2b4-bf450b9457e2)
 
-Điều thú vị nữa là thay vì nó deny luôn ngay từ khúc upload thì nó lại nhận request và in ra cái lỗi tào lao kia :"))
+Điều thú vị nữa là thay vì nó deny luôn ngay từ khúc upload thì nó lại nhận request và in ra cái lỗi tào lao kia :")), ai đời lại in ra functions nơi mà file ảnh sẽ được up lên thế kia v:, dơ mặt cho hacker đấm.
 
+Vậy bây giờ ta hãy tận dụng và gọi đến hàm `setAvatar()` ở SSTI xem thử nào, ta để ý rằng hàm đó nó cần 2 arguments, 1 là file names, 2 là mine type. Mục đích là để file up lên luôn là hình ảnh, nhưng nó filter theo kiểu tào lao này dẫn đến attacker có thể kiểm soát toàn bộ luồng request.
 
+Tiến hành gọi đến functions setAvatar('/etc/passwd', 'image/jpg').
 
+![image](https://github.com/user-attachments/assets/9543e899-c5d3-46cd-a402-3b4fa7db109f)
 
+Truy cập vào image thì ta thấy được nó dã RCE thành công.
 
+![image](https://github.com/user-attachments/assets/1ac2b18e-6d19-4303-8375-74556339bb1e)
 
+Tiến hành set avatar là file mà chúng ta cần xóa. sau đó gọi hàm user.gdprDelete() để xóa nó.
+
+![image](https://github.com/user-attachments/assets/7bd961c9-fe56-4006-ac4b-2d3e47f33579)
+
+![image](https://github.com/user-attachments/assets/53d187a8-0633-430c-829f-dcc0cc615ee0)
+
+Và thành công.
