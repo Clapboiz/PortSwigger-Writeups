@@ -19,15 +19,9 @@ Tiến hành đổi email và bắt request thì ta thấy được lần này n
 
 Bạn có thể thấy samesite không được set, tức là mặc định nó là lax. vậy còn cách nào khác không??
 
-POST không gửi cookie trong cross-site requests với SameSite=Lax, để chặn CSRF.
-
-GET vẫn gửi cookie trong cross-site requests nếu có điều hướng cấp cao nhất, nên có thể bypass CSRF trong một số trường hợp.
-
-Vậy thì tiến hành đổi sang GET v:
-
 ![image](https://github.com/user-attachments/assets/a09e80c3-ecba-4985-adc1-cdcc57896558)
 
-v:, đọc doc tiếp thì để gửi với get method thì ta phải thêm _method vào
+Trong trường hợp này, vì SameSite=Lax cho phép cookie đi kèm với yêu cầu GET từ cross-site, bạn có thể bypass CSRF bằng cách đổi yêu cầu từ POST sang GET. Tuy nhiên, Laravel yêu cầu thêm _method=POST vào yêu cầu GET để xác định đây là giả lập của POST.
 
 ![image](https://github.com/user-attachments/assets/d4934f66-ec72-43f6-a4f8-642b916cedeb)
 
