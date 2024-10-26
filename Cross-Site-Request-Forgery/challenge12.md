@@ -6,7 +6,7 @@
 
 Bạn quan sát được sự khác biệt chứ.
 
-Đó chính là nó sẽ check xem cùng domain hay không? nó chỉ quan tâm có cùng domain hay không thôi, và cơ chế check của nó thì tôi có thể đoán được rằng nó đang check từng kí tự từ index = 0 cho đến kí tự cuối của domain thì sẽ pass, nó sẽ không quan tâm đằng sau cái domain đó là cái gì.
+Đó chính là nó sẽ check xem cùng domain hay không? nó chỉ quan tâm có cùng domain hay không thôi, và cơ chế check của nó thì tôi có thể đoán được rằng nó đang check xem domain đó có tồn tại trong referer hay không, nếu có thì nó sẽ pass, nó sẽ không quan tâm đằng sau cái domain đó là cái gì.
 
 Và đây sẽ là 1 lỗ hổng giúp ta bypass, tức là giờ ta sẽ tìm cách nối dài cái url này bằng cách query nó chẳng hạn `?`.
 
