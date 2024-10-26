@@ -44,3 +44,7 @@ Vậy là đã thành công
 
 ## REFERENCES
 [1]. https://www.trustedsec.com/blog/setting-the-referer-header-using-javascript
+
+[2]. https://medium.com/@frank.leitner/writeup-csrf-where-token-is-tied-to-non-session-cookie-portswigger-academy-60fb8062363b
+
+[3]. https://medium.com/@uchiha-rem01x/lab-csrf-with-broken-referer-validation-66970e73e484
