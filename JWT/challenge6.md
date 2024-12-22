@@ -18,3 +18,35 @@ Tại sao lại chọn null byte (\x00, AA==) làm key?
 + Bypass ký tự đặc biệt: Null byte (\x00) rất đơn giản và ít bị chặn bởi các hệ thống lọc hoặc xử lý.
 
 ![image](https://github.com/user-attachments/assets/2354742f-10a5-4927-b47a-7ef813c32a79)
+
+Nhưng bằng cách này thì không thể kí được tôi không hiểu tại sao, đọc 1 vài tài liệu thì nó kêu là do null byte, nhưng mà tôi nghĩ do burp của tôi phiên bản thấp quá, tại vì tôi thấy người ta vẫn kí được bình thường. Và tôi cũng đã sử dụng kí bằng empty key, jwt.io nhưng đều không được, ai biết thì có thể cho tôi biết với nhé :<<<
+
+Thôi thì bây giờ chúng ta dùng jwt_tool để tạo payload phù hợp nhé.
+
+```
+python .\jwt_tool.py eyJraWQiOiI0YWIzMTE0ZS1kMjBlLTRjYWItYTMwOS05M2Q1OTI1MWY4NjUiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJwb3J0c3dpZ2dlciIsImV4cCI6MTczNDg0NDUyOCwic3ViIjoid2llbmVyIn0.7_Lcb_SxXBOOyrpL53wAGgQboLLWT3Jm90varKOjdaU -I -hc kid -hv '../../../dev/null' -pc sub -pv administrator -S hs256 -p ''
+```
+
+Thì giờ tôi giải thích sơ qua cho bạn hiểu nhé.
+
+-I: Kích hoạt chế độ "Injection Mode" để sửa đổi hoặc chèn dữ liệu.
+
+-hc kid: Header Claim (hc) được sửa đổi là kid.
+
+-hv '../../../dev/null': Giá trị (hv) chèn vào kid là '../../../dev/null'.
+
+Đây là một kỹ thuật tấn công bằng cách trỏ kid đến một file không hợp lệ nhằm bỏ qua khóa ký.
++ -pc sub: Payload Claim (pc) được sửa đổi là sub.
++ -pv administrator: Giá trị mới (pv) của sub là "administrator".
+
+Mục đích là nâng quyền từ "wiener" thành "administrator".
++ -S hs256: Chỉ định thuật toán ký là HS256.
++ -p '': Chỉ định khóa bí mật (secret) là một chuỗi rỗng ('').
+
+![image](https://github.com/user-attachments/assets/7d04ad0b-f409-4e88-a9c8-9491179c81ec)
+
+![image](https://github.com/user-attachments/assets/17681da6-4d21-44af-a07b-67543d705417)
+
+![image](https://github.com/user-attachments/assets/5976cf3e-472b-4da0-88f2-22e7205d7207)
+
+Vậy là đã thành công rồi nè.
