@@ -6,6 +6,16 @@
 
 # So sánh hai bài Lab: Web Cache Deception  
 
+Lab 1 (Origin Server Normalization):
+
++ Origin server giải mã ..%2f thành /my-account, cho phép truy cập dữ liệu mà cache server không xử lý được.
++ Đường dẫn exploit: /resources/..%2fmy-account.
+
+Lab 2 (Cache Server Normalization):
+
++ Cache server xử lý %23 như một phần của đường dẫn, trong khi origin server coi nó là phân cách. Điều này dẫn đến việc cache nhầm response.
++ Đường dẫn exploit: /my-account%23%2f%2e%2e%2fresources.
+
 | **Tiêu chí**                          | **Lab: Exploiting origin server normalization for web cache deception** | **Lab: Exploiting cache server normalization for web cache deception** |
 |---------------------------------------|------------------------------------------------------------------------|-------------------------------------------------------------------------|
 | **Tên bài**                           | Origin server normalization                                            | Cache server normalization                                             |
