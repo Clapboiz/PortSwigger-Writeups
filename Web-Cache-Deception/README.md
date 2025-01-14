@@ -23,6 +23,6 @@
 |                                       | - Cache server không decode `..%2f`, nhưng origin server decode được.  | - Cache server decode `..%2f` và chấp nhận quy tắc cache.              |
 | **Payload khai thác**                 | ```javascript                                                         | ```javascript                                                          |
 | `<script>                                                                  | `<script>                                                               |
-| document.location="https://YOUR-LAB-ID.web-security-academy.net/resources/..%2fmy-account?wcd"</script>` | document.location="https://YOUR-LAB-ID.web-security-academy.net/my-account%23%2f%2e%2e%2fresources?wcd"</script>` |
+| document.location="https://YOUR-LAB-ID.web-security-academy.net/resources/..%2fmy-account"</script>` | document.location="https://YOUR-LAB-ID.web-security-academy.net/my-account%23%2f%2e%2e%2fresources"</script>` |
 |                                       | ```                                                                    | ```                                                                     |
 | **Kết quả**                           | API key được cache và có thể truy cập qua URL đã khai thác.            | API key được cache và có thể truy cập qua URL đã khai thác.            |
