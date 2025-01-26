@@ -40,7 +40,7 @@ Ta có thể thấy được chỉ có dấu `;` thì server nó mới cache. R�
 <script>document.location="https://0a7700320423322480df67be00500056.web-security-academy.net/my-account;%2f%2e%2e%2frobots.txt"</script>
 ```
 
-Sau khi gửi link cho nạn nhân và nạn nhân click vào thì ta truy cập vào thì nó đã cache rồi
+Sau khi gửi link cho nạn nhân và nạn nhân click vào thì ta truy cập vào thì nó đã cache rồi, server cache nội dung file robots.txt dưới tên `my-account;%2f%2e%2e%2frobots.txt`.
 
 ![image](https://github.com/user-attachments/assets/3a50dfb0-0841-4ade-b04d-2fd3e7317e9d)
 
