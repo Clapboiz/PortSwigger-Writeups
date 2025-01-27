@@ -16,3 +16,31 @@
 ## Challenge 16: Blind SQL injection with out-of-band interaction
 ## Challenge 17: Blind SQL injection with out-of-band data exfiltration
 ## Challenge 18: SQL injection with filter bypass via XML encoding
+
+1. MySQL
+
+Trong MySQL, thông tin về cơ sở dữ liệu, bảng và cột được lưu trong information_schema:
+
++ information_schema.tables: Chứa danh sách các bảng.
++ information_schema.columns: Chứa danh sách các cột.
+
+2. PostgreSQL
+
+Trong PostgreSQL, thông tin về cơ sở dữ liệu được lưu trong các bảng pg_catalog:
+
++ pg_catalog.pg_tables: Chứa danh sách các bảng.
++ pg_catalog.pg_attribute: Chứa danh sách các cột.
+
+3. SQL Server
+
+Trong SQL Server, thông tin về cơ sở dữ liệu được lưu trong bảng hệ thống:
+
++ sys.tables: Chứa danh sách các bảng.
++ sys.columns: Chứa danh sách các cột.
+
+4. Oracle
+
+Trong Oracle, thông tin về cơ sở dữ liệu, bảng và cột được lưu trong các dictionary views:
+
++ USER_TABLES: Chứa danh sách các bảng thuộc user hiện tại.
++ USER_TAB_COLUMNS: Chứa danh sách các cột trong các bảng của user hiện tại.
