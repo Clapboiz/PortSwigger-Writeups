@@ -32,6 +32,22 @@ Vì chỉ có một cột hiển thị, ta cần nối username và password l�
 ' UNION SELECT CONCAT(username, ' - ', password) FROM users--
 ```
 
+**' UNION SELECT username + ' - ' + password FROM users--**
+
+**_Nếu gặp lỗi do NULL_**
+
+Trong SQL Server, nếu một trong hai giá trị username hoặc password là NULL, phép nối chuỗi + có thể trả về NULL toàn bộ chuỗi. Để tránh điều này, dùng ISNULL():
+
+ISNULL(username, 'N/A'): Nếu username bị NULL, thay bằng 'N/A'.
+
+ISNULL(password, 'N/A'): Nếu password bị NULL, thay bằng 'N/A'.
+
+Điều này đảm bảo câu lệnh không bị lỗi NULL và hiển thị đầy đủ kết quả.
+
+```
+' UNION SELECT ISNULL(username, 'N/A') + ' - ' + ISNULL(password, 'N/A') FROM users--
+```
+
 username || ' - ' || password: Nối username và password bằng dấu - để dễ đọc.
 
 Nếu hệ thống chạy MySQL, thay || bằng CONCAT(username, ' - ', password).
