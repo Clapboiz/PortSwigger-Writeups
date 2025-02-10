@@ -6,7 +6,7 @@
 
 Dù ta có nháy đơn hay nháy kép kiểu gì thì nó cũng k cho ta dấu hiệu gì hết.
 
-Vậy thì nó là blind rồi. Tiến hành check dựa vào boolen based
+Vậy thì nó là blind rồi. Tiến hành check dựa vào boolean based
 
 ![image](https://github.com/user-attachments/assets/e033b939-01b9-417b-bd74-912902b7b37e)
 
