@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/17bdd62e-7b83-4c20-8276-1fc07726fa49)
+
 ![image](https://github.com/user-attachments/assets/cc16552d-8149-42d8-b223-26335cc24fe9)
 
 Sau khi test với nháy đơn thì xác định được ứng dụng bị sqli.
