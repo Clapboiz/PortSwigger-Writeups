@@ -73,6 +73,8 @@ Ta có thể thấy cả 3 đều là True hết thì nó đã nhả data v:, l�
 
 ![image](https://github.com/user-attachments/assets/71ecfda4-eefd-487a-84d5-a8307f18f6b0)
 
+![image](https://github.com/user-attachments/assets/5a18a0cc-72be-4847-9984-e2618b66c8fc)
+
 Vậy là thành công.
 
 ```
